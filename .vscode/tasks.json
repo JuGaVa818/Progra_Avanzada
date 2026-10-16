@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Mastermind",
+			"type": "shell",
+			"command": "${env:USERPROFILE}\\.dotnet\\dotnet.exe",
+			"args": [
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Verify .NET SDK",
+			"type": "shell",
+			"command": "${env:USERPROFILE}\\.dotnet\\dotnet.exe",
+			"args": [
+				"--version"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

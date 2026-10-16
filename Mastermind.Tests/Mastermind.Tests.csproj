@@ -16,6 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\MastermindEvaluator.cs" Link="MastermindEvaluator.cs" />
+    <Compile Include="..\GameEngine.cs" Link="GameEngine.cs" />
+    <Compile Include="..\GameConfiguration.cs" Link="GameConfiguration.cs" />
+    <Compile Include="..\CheatCodeStore.cs" Link="CheatCodeStore.cs" />
+    <Compile Include="..\AttemptLogger.cs" Link="AttemptLogger.cs" />
     <Compile Remove="AdvancedRequirementsTests.cs" />
   </ItemGroup>
 </Project>

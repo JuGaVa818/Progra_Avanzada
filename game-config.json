@@ -1,0 +1,16 @@
+{
+  "tamanoInicial": 4,
+  "tamanosPermitidos": [4, 6],
+  "colores": [
+    { "codigo": "R", "nombre": "Red", "hex": "#F46A5C" },
+    { "codigo": "G", "nombre": "Green", "hex": "#5BCC8B" },
+    { "codigo": "B", "nombre": "Blue", "hex": "#52A4E1" },
+    { "codigo": "Y", "nombre": "Yellow", "hex": "#F6C64B" },
+    { "codigo": "C", "nombre": "Cyan", "hex": "#55CFD2" },
+    { "codigo": "K", "nombre": "Black", "hex": "#41484C" },
+    { "codigo": "P", "nombre": "Purple", "hex": "#AE82DC" },
+    { "codigo": "W", "nombre": "White", "hex": "#E7EAE1" },
+    { "codigo": "I", "nombre": "Pink", "hex": "#F48FB1" },
+    { "codigo": "N", "nombre": "Brown", "hex": "#9B6843" }
+  ]
+}

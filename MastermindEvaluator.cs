@@ -1,12 +1,16 @@
 namespace Mastermind;
 
-public sealed record EvaluationResult(int BienPosicionados, int ColorCorrecto);
+public sealed record CheatHint(int Position, char? Color, bool SinSuerte);
+
+public sealed record EvaluationResult(int BienPosicionados, int ColorCorrecto, CheatHint? CheatHint = null);
 
 public static class MastermindEvaluator
 {
     public static EvaluationResult EvaluarIntento(
         string patronSecreto,
-        string intentoJugador)
+        string intentoJugador,
+        string? cheatCode = null,
+        Random? random = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(patronSecreto);
         ArgumentException.ThrowIfNullOrWhiteSpace(intentoJugador);
@@ -57,6 +61,14 @@ public static class MastermindEvaluator
             }
         }
 
-        return new EvaluationResult(exact, misplaced);
+        CheatHint? hint = null;
+        if (!string.IsNullOrWhiteSpace(cheatCode))
+        {
+            int position = (random ?? Random.Shared).Next(secret.Length);
+            bool alreadyCorrect = secret[position] == guess[position];
+            hint = new CheatHint(position + 1, alreadyCorrect ? null : secret[position], alreadyCorrect);
+        }
+
+        return new EvaluationResult(exact, misplaced, hint);
     }
 }
