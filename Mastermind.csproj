@@ -8,6 +8,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Mastermind.Tests/**/*.cs" />
+    <Compile Remove="Parqueo/**/*.cs" />
+    <Compile Remove="Parqueo.Tests/**/*.cs" />
     <None Update="game-config.json" CopyToOutputDirectory="PreserveNewest" />
     <None Update="cheat-codes.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
